@@ -25,10 +25,10 @@ function draw(){                                        //Lines 16-34 draw a lin
     }else if (i == 5*25 || i == 10*25 ||
               i == 20*25 || i == 25*25) {
             fill("green")
-            rect(i-25/2, y/2, 25, 25)
+            rect(i-25/2, y/2-.5, 25, 25)
     }else if (i == 15*25) {
             fill("blue")
-            rect(i-25/2, y/2, 25, 25)
+            rect(i-25/2, y/2-.5, 25, 25)
     }
 }
 }
