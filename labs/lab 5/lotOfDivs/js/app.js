@@ -2,32 +2,17 @@
 //May 26, 2022
 //N220-11088
 
-let dvDivy = document.getElementById("divy");  //Line 5 creates the div element "McDiv"
-let newEl = document.createElement("div");
+for(var i = 0; i < 100; i++){                               //Lines 5-18 loop through the div stylings
+    var boxes = document.createElement('div');              //to create 100 div boxes of random colors
+    var r = Math.floor(Math.random()*255);
+    var g = Math.floor(Math.random()*255);
+    var b = Math.floor(Math.random()*255);
 
+    boxes.style.backgroundColor = "rgb("+r+","+g+","+b+")";
+    boxes.style.height = "20px";
+    boxes.style.width = "20px";
+    boxes.style.float = "left";
+    boxes.style.margin = "4.3px";
 
-for(var i = 0; i < 100; i++){
-newEl.appendChild(createDiv(i));
+    document.getElementById('boxes').appendChild(boxes);
 }
-
-
-
-function createDiv(){
-    dvDivy.style.backgroundColor = "#000000";
-    dvDivy.style.height = "20px";
-    dvDivy.style.width = "20px";
-    dvDivy.style.float = "left";
-}
-
-
-
-
-
-// function randomColor(){
-//     const hexParts = "0123456789ABCDEF"
-//     let color = "#"
-//     for (var i = 0; i < 100; i++){
-//         color += hexParts[Math.floor(Math.random() * 16)];
-//     }
-//     return color;
-// }
