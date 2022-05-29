@@ -2,22 +2,23 @@
 // May 28, 2022
 // N220-11088
 
-let pet = {
-    name: "Jimbo",
+let pet = {                                                 //Lines 5-10 create an object "pet" with values
+    name: "Jimbo",                                          //for "name", "energy", "happiness", and "age"
     energy: 20,
     happiness: 50,
     age: 1
 }
-let name = document.getElementById("name");
-let age = document.getElementById("age")
+
+let name = document.getElementById("name");                 //Lines 12-15 create div elements for "name",
+let age = document.getElementById("age")                    //"age", "hunger", and "mood"
 let hunger = document.getElementById("hunger");
 let mood = document.getElementById("mood");
 
-name.innerHTML = pet.name
-name.style.fontSize = "50px"
-name.style.margin = "40px"
-name.style.float = "left"
-
+name.innerHTML = pet.name                                   //Lines 17-34 create divs to display the words
+name.style.fontSize = "50px"                                //"Jimbo", "Energy:" including the current
+name.style.margin = "40px"                                  //energy, "Happiness:" including the current
+name.style.float = "left"                                   //happiness, and "Age:" including the current 
+                                                            //age
 hunger.innerHTML = "Energy: " + pet.energy;
 hunger.style.fontSize = "50px"
 hunger.style.margin = "40px"
@@ -32,40 +33,40 @@ age.innerHTML = "Age: " +pet.age
 age.style.fontSize = "50px"
 age.style.margin = "40px"
 
-function feed(){
-    let newEnergy = pet.energy + 5;
-    let newHappiness = pet.happiness - 5;
-    let newAge = pet.age + 1;
-
+function feed(){                                            //Lines 36-45 create a function "feed()" that
+    let newEnergy = pet.energy + 5;                         //creates variables to display updated stats
+    let newHappiness = pet.happiness - 5;                   //after running the "statusUpdate()" function.
+    let newAge = pet.age + 1;                               //This function is run when the "feed" button
+                                                            //is clicked
     pet.energy = newEnergy
     pet.happiness = newHappiness
 
     statusUpdate()
 }
 
-function play(){
-    let newHappiness = pet.happiness + 5;
-    let newEnergy = pet.energy - 5;
-    let newAge = pet.age + 1;
-
+function play(){                                            //Lines 47-56 create a function "play()" that
+    let newHappiness = pet.happiness + 5;                   //creates variables to display updated stats
+    let newEnergy = pet.energy - 5;                         //after running the "statusUpdate()" function.
+    let newAge = pet.age + 1;                               //This function is run when the "play" button
+                                                            //is clicked
     pet.energy = newEnergy
     pet.happiness = newHappiness
 
     statusUpdate()
 }
 
-function statusUpdate() {
-
-    if(pet.energy <= 0 || pet.happiness <= 0){
-        let petUpdate = document.createElement('div')
-
-        petUpdate.innerHTML = "Jimbo has died :("
-        petUpdate.style.fontSize = "40px"
-        petUpdate.style.margin = "40px"
-
-        document.body.appendChild(petUpdate)
-        console.log("Jimbo has died :(")
-    }else if(pet.energy >= 100 && pet.happiness >= 100){
+function statusUpdate() {                                   //Lines 58-90 define a function,
+                                                            //"statusUpdate", that, when run in the
+    if(pet.energy <= 0 || pet.happiness <= 0){              //"feed()" or "play()" functions, will update
+        let petUpdate = document.createElement('div')       //the displayed stats of the "pet" with the new
+                                                            //and related stats (increased energy and 
+        petUpdate.innerHTML = "Jimbo has died :("           //decreased happiness when fed or increased
+        petUpdate.style.fontSize = "40px"                   //happiness and decreased energy when played
+        petUpdate.style.margin = "40px"                     //with). This function will also display a 
+                                                            //message: "Jimbo has died :(" if either stat
+        document.body.appendChild(petUpdate)                //reaches 0 or below OR "Jimbo is very happy :)"
+                                                            //if both stats are over 100. The pet's age will
+    }else if(pet.energy >= 100 && pet.happiness >= 100){    //also increase by 1 when both stats exceed 100
         let petUpdate = document.createElement('div')
 
         petUpdate.innerHTML = "Jimbo is very happy :)"
@@ -74,7 +75,7 @@ function statusUpdate() {
         pet.age = newAge
 
         document.body.appendChild(petUpdate)
-        console.log("Jimbo is very happy :)")
+
     }
 
     hunger.innerHTML = "Energy: " + pet.energy;
@@ -86,7 +87,4 @@ function statusUpdate() {
     mood.style.margin = "40px"
 
     age.innerHTML = "Age: " + pet.age
-
-    console.log("Energy: " + pet.energy)
-    console.log("Happiness: " + pet.happiness)
 }
