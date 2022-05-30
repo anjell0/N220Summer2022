@@ -34,8 +34,8 @@ age.style.fontSize = "50px"
 age.style.margin = "40px"
 
 function feed(){                                            //Lines 36-45 create a function "feed()" that
-    let newEnergy = pet.energy + 5;                         //creates variables to display updated stats
-    let newHappiness = pet.happiness - 5;                   //after running the "statusUpdate()" function.
+    let newEnergy = pet.energy + 40;                        //creates variables to display updated stats
+    let newHappiness = pet.happiness - 15;                  //after running the "statusUpdate()" function.
     let newAge = pet.age + 1;                               //This function is run when the "feed" button
                                                             //is clicked
     pet.energy = newEnergy
@@ -45,8 +45,8 @@ function feed(){                                            //Lines 36-45 create
 }
 
 function play(){                                            //Lines 47-56 create a function "play()" that
-    let newHappiness = pet.happiness + 5;                   //creates variables to display updated stats
-    let newEnergy = pet.energy - 5;                         //after running the "statusUpdate()" function.
+    let newHappiness = pet.happiness + 20;                  //creates variables to display updated stats
+    let newEnergy = pet.energy - 10;                        //after running the "statusUpdate()" function.
     let newAge = pet.age + 1;                               //This function is run when the "play" button
                                                             //is clicked
     pet.energy = newEnergy
