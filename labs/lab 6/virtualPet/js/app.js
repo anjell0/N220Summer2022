@@ -33,29 +33,27 @@ age.innerHTML = "Age: " +pet.age
 age.style.fontSize = "50px"
 age.style.margin = "40px"
 
-function feed(){                                            //Lines 36-45 create a function "feed()" that
+function feed(){                                            //Lines 36-44 create a function "feed()" that
     let newEnergy = pet.energy + 40;                        //creates variables to display updated stats
     let newHappiness = pet.happiness - 15;                  //after running the "statusUpdate()" function.
-    let newAge = pet.age + 1;                               //This function is run when the "feed" button
-                                                            //is clicked
-    pet.energy = newEnergy
-    pet.happiness = newHappiness
-
+                                                            //This function is run when the "feed" button
+    pet.energy = newEnergy                                  //is clicked
+    pet.happiness = newHappiness                                                        
+    
     statusUpdate()
 }
 
-function play(){                                            //Lines 47-56 create a function "play()" that
+function play(){                                            //Lines 46-54 create a function "play()" that
     let newHappiness = pet.happiness + 20;                  //creates variables to display updated stats
     let newEnergy = pet.energy - 10;                        //after running the "statusUpdate()" function.
-    let newAge = pet.age + 1;                               //This function is run when the "play" button
-                                                            //is clicked
-    pet.energy = newEnergy
-    pet.happiness = newHappiness
+                                                            //This function is run when the "play" button
+    pet.energy = newEnergy                                  //is clicked
+    pet.happiness = newHappiness                                                        
 
     statusUpdate()
 }
 
-function statusUpdate() {                                   //Lines 58-90 define a function,
+function statusUpdate() {                                   //Lines 56-88 define a function,
                                                             //"statusUpdate", that, when run in the
     if(pet.energy <= 0 || pet.happiness <= 0){              //"feed()" or "play()" functions, will update
         let petUpdate = document.createElement('div')       //the displayed stats of the "pet" with the new
