@@ -68,6 +68,7 @@ function statusUpdate() {                                   //Lines 58-90 define
                                                             //if both stats are over 100. The pet's age will
     }else if(pet.energy >= 100 && pet.happiness >= 100){    //also increase by 1 when both stats exceed 100
         let petUpdate = document.createElement('div')
+        let newAge = pet.age + 1
 
         petUpdate.innerHTML = "Jimbo is very happy :)"
         petUpdate.style.fontSize = "40px"
@@ -75,7 +76,6 @@ function statusUpdate() {                                   //Lines 58-90 define
         pet.age = newAge
 
         document.body.appendChild(petUpdate)
-
     }
 
     hunger.innerHTML = "Energy: " + pet.energy;
