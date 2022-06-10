@@ -2,16 +2,16 @@
 //June 8, 2022
 //N220-11088
 
-let txtGuess = document.getElementById('txtGuess')      //Line 5 gets the element "txtGuess" from the HTML
+let txtGuess = document.getElementById('txtGuess')                      //Lines 5-6 get element "txtGuess" from
+let answer = 4                                                          //the HTML and create a variable "answer"
 
-function guess() {                                      //Lines 7-40 create the function "guess" which, when
-    let answer = 4                                      //a value is typed into the input box and the "Make
-    let yourGuess = Number(txtGuess.value)              //Guess!" button is clicked, you will see a line of
-                                                        //text that will tell you if your guess is "Too high",
-    if(yourGuess < answer) {                            //"Too low", or "Correct". The fields will be emptied
-        let low = document.createElement('div')         //with each click of the button
-
-        low.innerHTML = "Too low!"
+function guess() {                                                      //Lines 8-41 create a function "guess"
+    let yourGuess = Number(txtGuess.value)                              //for the "Make Guess" button that will
+                                                                        //display an appropriate message if
+    if(yourGuess < answer) {                                            //your guess is too high, too low, or
+        let low = document.createElement('div')                         //correct. If the guess is correct, a
+                                                                        //new number will be randomly generated
+        low.innerHTML = "Too low!"                                      //prompting the user to play again
         low.style.fontSize = "30px"
 
         document.body.appendChild(low)
@@ -35,8 +35,7 @@ function guess() {                                      //Lines 7-40 create the 
 
         document.body.appendChild(correct)
 
-        answer = 8
+        answer = newAnswer
         txtGuess.value = ""
     }
-
 }
