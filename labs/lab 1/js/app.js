@@ -18,6 +18,7 @@ var dye = "#C2AF5A"
 var dre = "#A43F54"
 var dbr = "#4C222C"
 var dor = "#B76542"
+var x = 50
 
 function setup() {                                  //Lines 22-25 create a setup function which creates a
     createCanvas(800, 600)                          //canvas 800 pixels wide and 600 pixels tall and sets
@@ -76,4 +77,16 @@ function draw() {                                   //Lines 27-79 draw several s
     fill(0, 0, 0)
     ellipse(m-75, t+25, 60/2, 115/2)
     ellipse(m+75, t+25, 60/2, 115/2)
+    
+    magicCircle("#FF0000", 50, 50, 50)
+    
 }
+
+    function magicCircle(color, y, size){
+    
+    fill(color)
+    
+    ellipse(x, y, size)
+    
+    x++
+    }
