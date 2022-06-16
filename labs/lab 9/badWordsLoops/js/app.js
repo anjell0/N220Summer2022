@@ -26,12 +26,5 @@ function search() {                                                             
     
             txtBad.value = ""
             }
-        // }else{
-        //     badTxt.innerHTML = "We found no bad words in your text!"
-        //     badTxt.style.fontSize = "30px"
-        
-        //     txtBad.value = ""
-        // }
-        
     }
 }
