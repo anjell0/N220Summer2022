@@ -20,11 +20,10 @@ function search() {                                                             
             (searchedText[i].toUpperCase() == tires.toUpperCase())) {
 
             badWordCount++
-            
-            badTxt.innerHTML = "We found " + badWordCount + " bad words in your text!"
-            badTxt.style.fontSize = "30px"
-    
-            txtBad.value = ""
-            }
+        }
     }
+    badTxt.innerHTML = "We found " + badWordCount + " bad words in your text!"
+    badTxt.style.fontSize = "30px"
+
+    txtBad.value = ""
 }
